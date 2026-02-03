@@ -3,6 +3,26 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 10.11.0 Release (February 2026)
+Maintenance release with bug fixes and general improvements.
+
+### Improvements
+
+- PIP-846 Address CVE-2025-6965
+- PIP-908 Address CVE-2025-41249
+- PIP-912 Address CVE-2024-52981
+- PIP-657 Add RBAC logging
+- MAINT-3010 Add fr-fr dialect alias configuration
+
+### Fixes
+
+- ISTO-143 Fix ancestor ECL bug
+- MAINT-2769 Fix description inactivation indicator being lost during conflict merge
+- MAINT-2981 Correct FR & DE module configuration
+- MAINT-2998 Upgrade Testcontainers for Docker compatibility
+- MAINT-2973 Improve handling of parents during automatic Descriptor ReferenceSetMembers creation
+- MAINT-3006 Improve error logs when encountering "connection lost" exceptions
+
 ## 10.10.1 Release (December 2025)
 Maintenance release with bug fixes and general improvements.
 
