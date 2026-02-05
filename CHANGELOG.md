@@ -3,7 +3,7 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## 10.11.0 Release (February 2026)
+## 10.11.1 Release (February 2026)
 Maintenance release with bug fixes and general improvements.
 
 ### Improvements
@@ -22,6 +22,7 @@ Maintenance release with bug fixes and general improvements.
 - MAINT-2998 Upgrade Testcontainers for Docker compatibility
 - MAINT-2973 Improve handling of parents during automatic Descriptor ReferenceSetMembers creation
 - MAINT-3006 Improve error logs when encountering "connection lost" exceptions
+- BROWSE-673 Fix inactive Concepts appearing in active Concept filtering
 
 ## 10.10.1 Release (December 2025)
 Maintenance release with bug fixes and general improvements.
