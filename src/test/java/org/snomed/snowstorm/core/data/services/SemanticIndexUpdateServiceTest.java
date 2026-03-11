@@ -1310,7 +1310,7 @@ class SemanticIndexUpdateServiceTest extends AbstractTest {
 		// Assert
 		// No unnecessary semantic index changes are made.
 		SearchHits<QueryConcept> semanticChanges = elasticsearchOperations.search(new NativeQueryBuilder()
-				.withQuery(RangeQuery.of(r -> r.number(nrq -> nrq.field("start").gte((double)now.getTime())))._toQuery())
+				.withQuery(RangeQuery.of(r -> r.date(d -> d.field("start").gte(String.valueOf(now.getTime()))))._toQuery())
 				.build(), QueryConcept.class);
 		assertEquals(0, semanticChanges.getTotalHits());
 
@@ -1330,7 +1330,7 @@ class SemanticIndexUpdateServiceTest extends AbstractTest {
 		// Assert
 		// No unnecessary semantic index changes are made.
 		semanticChanges = elasticsearchOperations.search(new NativeQueryBuilder()
-				.withQuery(RangeQuery.of(r -> r.number(nrq -> nrq.field("start").gte((double)now2.getTime())))._toQuery())
+				.withQuery(RangeQuery.of(r -> r.date(d -> d.field("start").gte(String.valueOf(now2.getTime()))))._toQuery())
 				.build(), QueryConcept.class);
 		assertEquals(0, semanticChanges.getTotalHits());
 	}

@@ -295,7 +295,7 @@ public class ConceptChangeHelper {
         Set<String> deletedOnTarget = getConceptsDeletedOnBranch(target);
         if (!deletedOnTarget.isEmpty()) {
             // Modified on Source (i.e. Project) outwith Target's own timeline.
-            Set<String> modifiedOnSource = getConceptsWithModifiedDescriptionsOnBranch(source, RangeQuery.of(r -> r.number(nrq -> nrq.field("start").gt((double)target.getBaseTimestamp())))._toQuery(), deletedOnTarget);
+            Set<String> modifiedOnSource = getConceptsWithModifiedDescriptionsOnBranch(source, RangeQuery.of(r -> r.date(d -> d.field("start").gt(String.valueOf(target.getBaseTimestamp()))))._toQuery(), deletedOnTarget);
             contradictoryChanges.addAll(modifiedOnSource);
         }
 
